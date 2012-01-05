@@ -27,6 +27,9 @@ module FreeAgent
     #
     # Refer to ActiveRecord::Base documentation for Dynamic attribute-based finders for detailed info.
     #
+    # Fix for ActiveResource 3.1+ errors
+        self.format = :xml
+        
     class DynamicFinderMatch
       def self.match(method)
         finder       = :first
